@@ -6,3 +6,11 @@ profile = "black"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "-v --cov=. --cov-report=term-missing"
+
+markers = [
+    "unit: модульные тесты",
+    "integration: интеграционные тесты",
+    "e2e: сквозные тесты",
+    "slow: медленные тесты"
+]
